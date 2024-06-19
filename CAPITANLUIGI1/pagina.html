@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog CAPITAN LUIGI</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Blog Social CAPITAN LUIGI </h1>
+            <button id="btnAbrirModal">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <!-- Modal de inicio de sesión -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="formLogin">
+                <input type="text" id="username" placeholder="Nombre de usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section id="perfil" class="container">
+            <!-- Perfil de usuario -->
+            <div class="perfil-info">
+                <div class="foto-perfil" id="fotoPerfil"></div>
+                <div class="info-usuario">
+                    <h2 id="nombreUsuario"></h2>
+                    <p id="descripcionUsuario"></p>
+                    <button id="cerrarSesion">Cerrar Sesión</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="nuevaPublicacion" class="container">
+            <!-- Formulario para hacer una nueva publicación -->
+            <h2>Nueva Publicación</h2>
+            <form id="formNuevaPublicacion">
+                <textarea id="contenido" placeholder="Escribe tu publicación aquí..." required></textarea>
+                <input type="url" id="urlImagen" placeholder="URL de la imagen (opcional)">
+                <button type="submit">Publicar</button>
+            </form>
+        </section>
+
+        <section id="muro" class="container">
+            <!-- Muro de publicaciones -->
+            <h2>Muro de Publicaciones</h2>
+            <div id="listaPublicaciones" class="publicaciones-lista">
+                <!-- Las publicaciones se añadirán dinámicamente con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script1.js"></script>
+</body>
+</html>

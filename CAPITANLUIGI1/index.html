@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPITAN LUIGI BLOG</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo de Mi Página Web">
+            </div>
+        <div class="header-content">
+            <h1>PAGINA DE CAPITAN LUIGI</h1>
+            <nav>
+                <a href="#home">Inicio</a>
+                <a href="#posts">Publicaciones</a>
+                <a href="#upload" id="upload-nav">Subir Contenido</a>
+                <a href="#profile" id="profile-nav" style="display: none;">Mi Perfil</a>
+            </nav>
+        </div>
+        <div class="auth-links">
+            <a href="#" id="login-nav">Iniciar Sesión</a>
+            <a href="#" id="register-nav">Registrarse</a>
+            <a href="#" id="logout-nav" style="display: none;">Cerrar Sesión</a>
+            <div class="additional-links">
+                <a href="pagina.html" class="external-link">SIGUIENTE</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Inicio</h2>
+            <p>Bienvenido a mi página web. Aquí puedes ver publicaciones, fotos y videos y contenido que suba a mi sitio y blog.</p>
+        </section>
+        <section id="posts">
+            <h2>PUBLICACIONES</h2>
+            <div id="post-container"></div>
+        </section>
+        <section id="upload" style="display: none;">
+            <h2>Subir Contenido</h2>
+            <form id="upload-form">
+                <input type="text" id="title" placeholder="Título" required><br>
+                <textarea id="content" placeholder="Escribe tu publicación aquí..." required></textarea><br>
+                <input type="file" id="media" accept="image/*,video/*"><br>
+                <button type="submit">Subir</button>
+            </form>
+        </section>
+        <section id="profile" style="display: none;">
+            <h2>Mi Perfil</h2>
+            <div class="profile-info">
+                <img src="profile-picture.jpg" alt="Foto de perfil" id="profile-picture">
+                <h3 id="profile-username">Mi Usuario</h3>
+                <p id="profile-bio">Esta es mi biografía. Soy el creador de esta página web.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CAPITAN LUIGI</p>
+    </footer>
+
+    <!-- Modal de Inicio de Sesión -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-login">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Nombre de Usuario" required><br>
+                <input type="password" id="login-password" placeholder="Contraseña" required><br>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-register">&times;</span>
+            <h2>Registrarse</h2>
+            <form id="register-form">
+                <input type="text" id="register-username" placeholder="Nombre de Usuario" required><br>
+                <input type="password" id="register-password" placeholder="Contraseña" required><br>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
